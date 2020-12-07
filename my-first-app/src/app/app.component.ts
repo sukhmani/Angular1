@@ -13,4 +13,5 @@ h3 {
 })
 export class AppComponent {
   name = '';
+  username = '';
 }
