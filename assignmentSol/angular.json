@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "assignmentSol"
+    }
+  },
+  "defaultProject": "assignmentSol",
+  "cli": {
+    "analytics": "471e5dec-faef-4f01-8a13-38b2a017ec16"
+  }
 }
