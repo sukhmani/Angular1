@@ -3,9 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { HeaderComponent } from './header/header.component';
+import { RecipiesComponent } from './recipies/recipies.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    RecipiesComponent
   ],
   imports: [
     BrowserModule
