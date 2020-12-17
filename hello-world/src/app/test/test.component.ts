@@ -14,6 +14,7 @@ import { Component, OnInit } from '@angular/core';
   <h2></h2>
   <input type = "text" value = "V">
   <input [id]="myId" type="text" value="v">
+  <input [disabled]="isDisabled" id="{{myId}}" type="text" value="abc">
   `,
   styles: [`div{
     color: red;
@@ -23,6 +24,7 @@ export class TestComponent implements OnInit {
 
 public name = "me";
 public myId = "testId";
+public isDisabled = true;
   constructor() { }
 
   ngOnInit(): void {
