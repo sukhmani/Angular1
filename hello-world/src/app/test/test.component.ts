@@ -11,20 +11,24 @@ import { Component, OnInit } from '@angular/core';
   {{name.toUpperCase()}}
   {{greetUser()}}
   </div> 
-  <h2></h2>
-  <input type = "text" value = "V">
-  <input [id]="myId" type="text" value="v">
-  <input bind-disabled="isDisabled" id="{{myId}}" type="text" value="abc">
+  <h2 class= "text-success">style</h2>
+  <h2 [class]="successClass">classBinding</h2> 
+  <h2 class="text-special" ><h2>
   `,
-  styles: [`div{
-    color: red;
-  }`]
+  styles: [`
+  
+  .text-success {color: green;}
+  .text-danger {color: red;}
+  .text-special {font-style: italic;}
+  `]
 })
 export class TestComponent implements OnInit {
 
 public name = "me";
 public myId = "testId";
 public isDisabled = false;
+public successClass = "text-success";
+
   constructor() { }
 
   ngOnInit(): void {
