@@ -10,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
   {{name.length}}
   {{name.toUpperCase()}}
   {{greetUser()}}
-  </div>`,
+  </div> 
+  <h2></h2>
+  <input type = "text" value = "V">
+  <input [id]="myId" type="text" value="v">
+  `,
   styles: [`div{
     color: red;
   }`]
@@ -18,6 +22,7 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
 public name = "me";
+public myId = "testId";
   constructor() { }
 
   ngOnInit(): void {
