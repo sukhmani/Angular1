@@ -20,6 +20,8 @@ import { Component, OnInit } from '@angular/core';
   {{greeting}}
   <input #myInput type ="text">
   <button (click)="logMessage(myInput.value)">log</button>
+  <input [(ngModel)]="name" type="text">
+  {{name}}
   `,
   styles: [`
   
@@ -30,7 +32,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-public name = "me";
+public name = "";
 public myId = "testId";
 public isDisabled = false;
 public successClass = "text-success";
