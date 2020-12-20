@@ -15,6 +15,7 @@ import { Component, OnInit } from '@angular/core';
   <h2 [class]="successClass">classBinding</h2> 
   <h2 [class.text-danger]="hasError" >SelectStyleBasedOnProperty</h2>
   <h2 [ngClass]="messageClasses">ConditionallyApplyMultipleClasses</h2>
+  <button (click)="onClick()">Greet</button>
   `,
   styles: [`
   
@@ -41,6 +42,10 @@ public messageClasses = {
 
   ngOnInit(): void {
   }
+
+    onClick()  {
+      console.log('Welcome to the world of coding')
+    }
 
   greetUser(){
     return "Hello " +this.name;
