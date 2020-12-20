@@ -15,7 +15,9 @@ import { Component, OnInit } from '@angular/core';
   <h2 [class]="successClass">classBinding</h2> 
   <h2 [class.text-danger]="hasError" >SelectStyleBasedOnProperty</h2>
   <h2 [ngClass]="messageClasses">ConditionallyApplyMultipleClasses</h2>
-  <button (click)="onClick()">Greet</button>
+  <button (click)="onClick($event)">Greet</button>
+  {{greeting}}
+  
   `,
   styles: [`
   
@@ -37,14 +39,16 @@ public messageClasses = {
   "text-danger": this.hasError,
   "text-special": this.isSpecial
 }
+public greeting = "";
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-    onClick()  {
-      console.log('Welcome to the world of coding')
+    onClick($event)  {
+      console.log(event)
+      this.greeting = event.type;
     }
 
   greetUser(){
