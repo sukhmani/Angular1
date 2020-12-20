@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "structural-directives"
+    }
+  },
+  "defaultProject": "structural-directives",
+  "cli": {
+    "analytics": "dfee3553-8787-4464-835e-f95e4a214920"
+  }
 }
