@@ -16,8 +16,10 @@ import { Component, OnInit } from '@angular/core';
   <h2 [class.text-danger]="hasError" >SelectStyleBasedOnProperty</h2>
   <h2 [ngClass]="messageClasses">ConditionallyApplyMultipleClasses</h2>
   <button (click)="onClick($event)">Greet</button>
+
   {{greeting}}
-  
+  <input #myInput type ="text">
+  <button (click)="logMessage(myInput.value)">log</button>
   `,
   styles: [`
   
@@ -54,6 +56,9 @@ public greeting = "";
   greetUser(){
     return "Hello " +this.name;
 
+  }
+  logMessage(value){
+    console.log(value);
   }
 
 }
