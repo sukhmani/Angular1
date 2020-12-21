@@ -11,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
   <div *ngSwitchDefault> Pick again </div>
 </div>
 
-  <div *ngFor="let color of colors">
-  <h2>{{color}}</h2>
+  <div *ngFor="let color of colors; index as i">
+  <h2>{{i}} {{color}} </h2>
   </div>
   
   `
