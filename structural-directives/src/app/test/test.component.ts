@@ -11,7 +11,9 @@ import { Component, OnInit } from '@angular/core';
   <div *ngSwitchDefault> Pick again </div>
 </div>
 
-  
+  <div *ngFor="let color of colors">
+  <h2>{{color}}</h2>
+  </div>
   
   `
   
@@ -23,6 +25,7 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   public color = "o";
+  public colors = ["red","blue","green","yellow"];
   constructor() { }
 
   ngOnInit(): void {
