@@ -4,21 +4,14 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   template: `
 
-
+<div [ngSwitch]= "color">
+  <div *ngSwitchCase="'red'">red</div>
+  <div *ngSwitchCase="'blue'">blue</div>
+  <div *ngSwitchCase="'green'">green</div>
+</div>
 
   
-  <div *ngIf = "displayName; then thenBlock; else elseBlock">A</div>
-
-
-  <ng-template #thenBlock>
-  <h2>then</h2>
-  </ng-template>
-
-  <ng-template #elseBlock>
-  <h2>
-  else
-  </h2>
-  </ng-template>
+  
   `
   
   
@@ -28,7 +21,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  displayName = false;
+  public color = "red";
   constructor() { }
 
   ngOnInit(): void {
