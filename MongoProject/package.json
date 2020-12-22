@@ -17,8 +17,5 @@
     "passport-jwt": "*"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "mongodb": "^3.6.3"
-  }
+  "license": "ISC"
 }
