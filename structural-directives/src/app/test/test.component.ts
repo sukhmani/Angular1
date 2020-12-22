@@ -1,19 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test',
   template: `
 
-<div [ngSwitch]= "color">
-  <div *ngSwitchCase="'red'">red</div>
-  <div *ngSwitchCase="'blue'">blue</div>
-  <div *ngSwitchCase="'green'">green</div>
-  <div *ngSwitchDefault> Pick again </div>
-</div>
 
-  <div *ngFor="let color of colors; index as i">
-  <h2>{{i}} {{color}} </h2>
-  </div>
+<h2>{{"hi  " + parentData}}</h2>
+
+  
   
   `
   
@@ -26,6 +20,8 @@ export class TestComponent implements OnInit {
 
   public color = "o";
   public colors = ["red","blue","green","yellow"];
+  @Input() public parentData;
+
   constructor() { }
 
   ngOnInit(): void {
