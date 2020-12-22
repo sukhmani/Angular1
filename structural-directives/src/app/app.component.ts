@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'structural-directives';
-  public name = "Me";
+  public namee = "Me";
+  public message = "";
 }
