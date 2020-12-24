@@ -4,7 +4,7 @@ const bodyparser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport-jwt');
 const mongoose = require('mongoose');
-const { Console } = require('console');
+
 const config = require('./config/database');
 
 //connected to the database
@@ -21,16 +21,18 @@ mongoose.connection.on('error', (err) => {
 
 const app = express();
 const users = require('./routes/users');
+
+//port number
 const port = 3000;
 
 // CORS middleware
 app.use(cors());
 
 //set static folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Body Parser Middleware
-app.use (bodyparser.json());
+app.use(bodyParser.json());
 
 
 app.use('/users', users);
